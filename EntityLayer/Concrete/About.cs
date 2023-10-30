@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Comment
+    public class About
     {
         [Key]
         public int Id { get; set; }
-        public string? UserName { get; set; }
-        public string? Title { get; set; }
-        public string? Content { get; set; }
-        public DateTime Date { get; set; }
+        public string? Details1 { get; set; }
+        public string? Details2 { get; set; }
+        public string? Image1 { get; set; }
+        public string? Image2 { get; set; }
+        public string? MapLocation {  get; set; }
         public bool Status { get; set; }
 
-    }
+}
 }
