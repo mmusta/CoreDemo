@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLibrary.Concretes
+namespace DataAccessLayer.Concrete
 {
-    public class Context: DbContext
+    public class Context : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder.UseSqlServer("server=;database=CoreBlogDB;integrated security=true;Encrypt=false"));
+            optionsBuilder.UseSqlServer("server=DESKTOP-9OEC3GE\\TEW_SQLEXPRESS;database=CoreBlogDB;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true");
         }
 
 
