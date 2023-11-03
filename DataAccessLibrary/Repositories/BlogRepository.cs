@@ -12,14 +12,19 @@ namespace DataAccessLayer.Repositories
 {
     public class BlogRepository : IBlogDal
     {
-        public void AddBlog(Blog blog)
+        public static void AddBlog(Blog blog)
         {
             using var c = new Context();
             c.Add(blog);
             c.SaveChanges();
         }
 
-        public void DeleteBlog(Blog blog)
+        public void Delete(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void DeleteBlog(Blog blog)
         {
             using var c = new Context();
             c.Remove(blog);
@@ -32,13 +37,28 @@ namespace DataAccessLayer.Repositories
             return c.Blogs.Find(id)!;
         }
 
-        public List<Blog> ListAllBlog()
+        public List<Blog> GetListAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static List<Blog> ListAllBlog()
         {
             using var c = new Context();
             return c.Blogs.ToList();
         }
 
-        public void UpdateBlog(Blog blog)
+        public void Update(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void UpdateBlog(Blog blog)
         {
             using var c = new Context();
             c.Update(blog);
