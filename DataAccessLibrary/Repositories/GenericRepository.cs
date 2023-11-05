@@ -43,7 +43,7 @@ namespace DataAccessLayer.Repositories
             c.SaveChanges();
         }
 
-		public void GetListAll<T> private List(Expression<Func<T, bool>> filter)
+		public void GetListAll<T> List(Expression<Func<T, bool>> filter)
 		{
 			using var c = new Context();
 			return c.Set<T>().Where(filter).ToList();
