@@ -11,7 +11,7 @@ namespace BusinessLayer.Concrete
 {
 	public class BlogManager : IBlogService
 	{
-		IBlogDal _blogDal;
+		readonly IBlogDal _blogDal;
 
 		public BlogManager(IBlogDal blogDal)
 		{
@@ -44,9 +44,9 @@ namespace BusinessLayer.Concrete
 		{
 			throw new NotImplementedException();
 		}
-		public static List<Blog> GetListAll(x=> x.BlogID == id);
-		{ 
-public List<Blog> GetList()
+		public List<Blog> GetListAll(x=> x.BlogID == id);
+		
+		public List<Blog> GetList()
 		{
 			throw new NotImplementedException();
 		}
@@ -57,10 +57,8 @@ public List<Blog> GetList()
 		}
 	}
 
-
-		public List<Blog> GetList()
+		public List<Blog> GetListAll()
 		{
 			return _blogDal.GetListAll();
 		}
 	}
-}
