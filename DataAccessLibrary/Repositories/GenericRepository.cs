@@ -30,12 +30,6 @@ namespace DataAccessLayer.Repositories
             using var c = new Context();
             return c.Set<T>().ToList();
         }
-
-		public List<T> GetListAll(Expression<Func<T, bool>> filter)
-		{
-			throw new NotImplementedException();
-		}
-
 		public void Insert(T t)
         {
             using var c = new Context();
@@ -43,7 +37,7 @@ namespace DataAccessLayer.Repositories
             c.SaveChanges();
         }
 
-		public void GetListAll<T> List(Expression<Func<T, bool>> filter)
+		public List<T> GetListAll(Expression<Func<T, bool>> filter)
 		{
 			using var c = new Context();
 			return c.Set<T>().Where(filter).ToList();
