@@ -10,9 +10,9 @@ using System.Security.Cryptography.Pkcs;
 
 namespace CoreDemo.Controllers
 {
-	CommentManager cm = new CommentManager(new EfCommentRepository());
 	public class CommentController : Controller
 	{
+		readonly CommentManager cm = new(new EfCommentRepository());
 		public IActionResult Index()
 		{
 			return View();
@@ -23,7 +23,7 @@ namespace CoreDemo.Controllers
 		}
 		public PartialViewResult CommentListByBlog(int id)
 		{
-			var values = cm.GetList(id);
+			_ = cm.GetList(id);
 			return PartialView();
 		}
 	}
