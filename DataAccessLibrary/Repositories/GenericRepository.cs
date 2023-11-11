@@ -56,7 +56,4 @@ namespace DataAccessLayer.Repositories
 		}
 	}
 
-	public class GetListAll<T> where T : class
-	{
-	}
 }
