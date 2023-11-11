@@ -1,4 +1,4 @@
-﻿
+﻿@model IQueryable<EntityLayer.Concrete.Blog>
 @{
     ViewData["Title"] = "BlogReadAll";
     Layout = "~/Views/Shared/UserLayout.cshtml";
@@ -15,6 +15,7 @@
 			<div class="row">
 				<!--left-->
 				<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+					
 					<div class="blog-grid-top">
 						<div class="b-grid-top">
 							<div class="blog_info_left_grid">
@@ -45,7 +46,7 @@
 						</div>
 
 						<h3>
-							<a href="single.html">Amet consectetur adipisicing </a>
+							<a href="single.html"></a>
 						</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
@@ -54,7 +55,7 @@
 						</p>
 						<a href="single.html" class="btn btn-primary read-m">Read More</a>
 					</div>
-
+					
 					<div class="comment-top">
 						<h4>Comments</h4>
 						<div class="media">
