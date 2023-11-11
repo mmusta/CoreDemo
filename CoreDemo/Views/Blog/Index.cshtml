@@ -11,9 +11,10 @@
 			<!--left-->
 			<div class="left-blog-info-w3layouts-agileits text-left">
 				<div class="row">
-					@foreach(var item in Model){
+					@foreach (var item in Model)
+					 {
 					<div class="col-lg-4 card">
-						<a href="single.html">
+							<a href="/Blog/BlogReadAll/@item.BlogID">
 							<img src="@item.Image" class="card-img-top img-fluid" alt="">
 						</a>
 						<div class="card-body">
@@ -37,7 +38,7 @@
 
 							</ul>
 							<h5 class="card-title">
-								<a href="single.html">@item.Title</a>
+									<a href="/Blog/BlogReadAll/@item.BlogID">@item.Title</a>
 							</h5>
 							<p class="card-text mb-3">@item.Content?.Substring(0,item.Content.Substring(0,15).LastIndexOf("")) </p>
 							<a href="/Blog/BlogReadAll/@item.BlogID/" class="btn btn-primary read-m">Devamını Oku</a>
