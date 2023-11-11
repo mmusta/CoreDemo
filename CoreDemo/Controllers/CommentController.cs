@@ -10,7 +10,7 @@ using System.Security.Cryptography.Pkcs;
 
 namespace CoreDemo.Controllers
 {
-	readonly CommentManager cm = new CommentManager(new EfCommentRepository());
+	CommentManager cm = new CommentManager(new EfCommentRepository());
 	public class CommentController : Controller
 	{
 		public IActionResult Index()
