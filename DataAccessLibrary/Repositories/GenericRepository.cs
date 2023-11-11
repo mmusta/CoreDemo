@@ -49,7 +49,12 @@ namespace DataAccessLayer.Repositories
             c.Update(t);
             c.SaveChanges();
         }
-    }
+
+		public T GetByID(int id)
+		{
+			throw new NotImplementedException();
+		}
+	}
 
 	public class GetListAll<T> where T : class
 	{
