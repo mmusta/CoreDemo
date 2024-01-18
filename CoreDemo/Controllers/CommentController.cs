@@ -26,8 +26,8 @@ namespace CoreDemo.Controllers
 		[HttpPost]
 		public PartialViewResult PartialAddComment(Comment p)
 		{
-			p.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-			p.CommentStatus = true;
+			p.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+			p.Status = true;
 			p.BlogID = 2;
 			cm.CommentAdd(p);
 			return PartialView();
