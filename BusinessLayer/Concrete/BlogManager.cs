@@ -40,17 +40,22 @@ namespace BusinessLayer.Concrete
 
 		}
 
+		private bool x(object arg)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Blog GetById(int id)
 		{
 			throw new NotImplementedException();
 		}
-		public List<Blog> GetBlogByID(int id)
+		public List<Blog>? GetBlogByID(int id)
 		{
 			return _blogDal.GetListAll(x => x.BlogID == id);
 
 		}
 
-		public List<Blog> GetListAll()
+		public List<Blog>? GetListAll()
 		{
 			return _blogDal.GetListAll();
 		}
