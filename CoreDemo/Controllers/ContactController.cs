@@ -7,7 +7,7 @@ namespace CoreDemo.Controllers
 {
 	public class ContactController : Controller
 	{
-		ContactManager cm=new ContactManager(new EfContactRepository());
+		readonly ContactManager cm = new(new EfContactRepository());
 
 
 		[HttpGet]

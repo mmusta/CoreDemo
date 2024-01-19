@@ -4,9 +4,6 @@ namespace CoreDemo.Controllers
 {
 	public class ErrorPageController : Controller
 	{
-		public IActionResult Error1(int _context)
-		{
-			return View();
-		}
+		public IActionResult Error1(int Context) => View();
 	}
 }

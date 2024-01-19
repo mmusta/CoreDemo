@@ -6,7 +6,7 @@ namespace CoreDemo.Controllers
 {
 	public class AboutController : Controller
 	{
-		AboutManager abm=new AboutManager(new EfAboutRepository());
+		readonly AboutManager abm = new(new EfAboutRepository());
 		public IActionResult Index()
 		{
 			var values = abm.GetList();

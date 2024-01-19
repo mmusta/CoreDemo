@@ -40,11 +40,6 @@ namespace BusinessLayer.Concrete
 
 		}
 
-		private bool x(object arg)
-		{
-			throw new NotImplementedException();
-		}
-
 		public Blog GetById(int id)
 		{
 			throw new NotImplementedException();
