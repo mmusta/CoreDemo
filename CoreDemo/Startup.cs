@@ -27,6 +27,7 @@ namespace CoreDemo
 		{
 			services.AddControllersWithViews();
 
+
 			services.AddSession();
 
 			services.AddMvc(config =>
@@ -59,7 +60,7 @@ namespace CoreDemo
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 
-			app.UseSession();
+			IApplicationBuilder applicationBuilder = app.UseSession();
 
 			app.UseRouting();
 
