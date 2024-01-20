@@ -16,7 +16,7 @@ namespace CoreDemo
 {
 	public class Startup
 	{
-		private object x;
+		public object x;
 
 		public Startup(IConfiguration configuration)
 		{
@@ -69,7 +69,7 @@ namespace CoreDemo
 
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
-
+			app.UseAuthentication();
 			IApplicationBuilder applicationBuilder = app.UseSession();
 
 			app.UseRouting();
